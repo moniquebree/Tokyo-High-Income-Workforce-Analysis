@@ -1,23 +1,32 @@
-# Japan_Socio_Economic_Atlas
-A portfolio project using Python/SQL to model Japanese census and economic data. Demonstrates relational data integration, advanced SQL querying (GROUP BY/JOINs), and Power BI visualization for socio-economic analysis.
-# Project 2: Socio-Economic Atlas of Japan's Prefectures
+# Project 2: Japan Socio-Economic Atlas (Tokyo Pilot)
 
 ## 1. Project Objective
-The goal of this project was to model and integrate separate datasets using **SQL** to understand the relationship between population dynamics and economic structure across Japan’s prefectures.
+The goal of this project was to build a relational database from raw, unstructured government data to analyze the relationship between **Occupation** and **High Income** in Japan. The pilot phase focused specifically on the high-income workforce (>10 Million Yen) in **Tokyo**.
 
 ## 2. Core Tools & Skills
-* **SQL (SQLite):** Used for relational database modeling, table creation, and performing JOIN queries.
-* **Python (Pandas):** Used to load raw CSV data into the SQLite database.
-* **Power BI:** Used for the final geospatial visualization and dashboard design.
+* **Python (Pandas):** Used to write custom cleaning scripts to strip complex headers from government Excel files and normalize column names.
+* **SQL (SQLite):** Used to build a relational database (`japan_atlas.db`) and execute targeted queries to filter for specific regions (Tokyo) and income brackets.
+* **Power BI:** Used for data modeling (unpivoting), DAX measure creation, and designing the final Executive Dashboard.
 
-## 3. The Process (The Relational Model)
-1.  **Data Sourcing:** Acquired two separate CSV files: Demographics (Population/Age) and Employment (Economy).
-2.  **Database Construction:** Wrote a Python script to build the `japan_atlas.db` file and load the data into two separate, linked tables.
-3.  **Data Integration:** Wrote a core **SQL JOIN query** to merge the population data with the economic data based on the 'Prefecture' key.
-4.  **Visualization:** Built an interactive Power BI map visual to display key findings by Prefecture.
+## 3. The Process (ETL & Analysis)
+1.  **Data Extraction:** Acquired raw "Employment Status Survey" data (Tables 4 and 25) containing multi-layered headers.
+2.  **Python Cleaning:** Wrote a custom Python script (`clean_data.py`) to:
+    * Automatically detect and strip metadata rows.
+    * Split the "Area" column into separate `Prefecture Code` and `Prefecture Name` columns for SQL indexing.
+    * Standardize column names for database ingestion.
+3.  **Database Construction:** Built a SQLite database and loaded the clean data into two linked tables: `labor_force` and `income_occupation`.
+4.  **SQL Analysis:** Executed a complex SQL query to filter for **"Tokyo-to"** and **Income brackets > 10 Million Yen**, exporting the results to a clean CSV for visualization.
+5.  **Visualization:** Built an interactive Power BI dashboard, utilizing **DAX measures** to calculate percentage shares and **Unpivoting** techniques to restructure the data for visual comparison.
 
 ## 4. Key Findings (The Story)
-Finding 1 (Population): The analysis of census data revealed that population is highly concentrated in major metropolitan areas, with Tokyo Metropolis, Osaka Prefecture, and Kanagawa Prefecture being the most populous regions.* Finding 2 (Geospatial): The map visual confirmed that population density is heavily concentrated in the Kanto and Kansai regions. The size of the population bubbles directly correlates with the total population sum, visually emphasizing the stark urban/rural divide.
+* **Finding 1: The Professional Dominance.** Contrary to the assumption that executive management is the primary path to wealth, **Clerical** roles are actually the #1 high-income profession in Tokyo, followed closely by **Professional/Engineering**.
+* **Finding 2: The Technical Premium.** Technical expertise is highly valued in the capital; **Engineering roles alone account for 39.06%** of the high-income workforce analyzed.
+* **Finding 3: Income Distribution.** The wealth pyramid is visible: **44.09%** of high earners fall into the entry high-income bracket (10-12.5M Yen), while only **16.85%** reach the top tier (>15M Yen).
 
-## 5. Next Steps
-The next step will be to search for a clean dataset with a common key to successfully perform the **full SQL JOIN** between demographics and industry data.
+## 5. Visualizations
+Below is the Executive Dashboard analyzing the high-income workforce in Tokyo (Total High Earner Count: 308K).
+
+![Tokyo High-Income Dashboard](Tokyo High-Income Workforce Analysis.png)
+
+## 6. Future Scope
+The next phase of this project will expand the SQL analysis from the Tokyo Pilot to a **National Atlas**, using the full dataset to compare income inequality and professional distribution across all 47 prefectures.
