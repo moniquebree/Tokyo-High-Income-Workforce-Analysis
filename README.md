@@ -19,12 +19,12 @@ The goal of this project was to build a relational database from raw, unstructur
 5.  **Visualization:** Built an interactive Power BI dashboard, utilizing **DAX measures** to calculate percentage shares and **Unpivoting** techniques to restructure the data for visual comparison.
 
 ## 4. Key Findings (The Story)
-* **Finding 1: The Professional Dominance.** Contrary to the assumption that executive management is the primary path to wealth, **Clerical** roles are actually the #1 high-income profession in Tokyo, followed closely by **Professional/Engineering**.
-* **Finding 2: The Technical Premium.** Technical expertise is highly valued in the capital; **Engineering roles alone account for 39.06%** of the high-income workforce analyzed.
-* **Finding 3: Income Distribution.** The wealth pyramid is visible: **44.09%** of high earners fall into the entry high-income bracket (10-12.5M Yen), while only **16.85%** reach the top tier (>15M Yen).
+* **Finding 1: The Professional Dominance.** Contrary to the assumption that executive management is the primary path to wealth, **Clerical** roles are actually the #1 high-income profession in Tokyo (**67K**), followed closely by **Professional/Engineering** (**60K**).
+* **Finding 2: The Technical Premium.** Technical expertise is highly valued in the capital; **Engineering roles alone account for 38.9%** of the high-income workforce analyzed.
+* **Finding 3: Income Distribution.** The wealth pyramid is visible: **44.1%** of high earners fall into the entry high-income bracket (10-12.5M Yen), while only **17.5%** reach the top tier (>15M Yen).
 
 ## 5. Visualizations
-Below is the Executive Dashboard analyzing the high-income workforce in Tokyo (Total High Earner Count: 308K).
+Below is the Executive Dashboard analyzing the high-income workforce in Tokyo (Total High Earner Count: **154K**).
 
 ![Tokyo High-Income Dashboard](Tokyo High-Income Workforce Analysis.png)
 
