@@ -1,30 +1,33 @@
 # 🗼 Tokyo High-Income Workforce Analysis
 
 ## 📊 Project Overview
-This dashboard performs a deep-dive micro-analysis of the economic elite in Tokyo. Focusing exclusively on the **High-Income bracket (>¥10 Million annually)**, the analysis challenges the assumption that "Management" is the only path to wealth in the capital.
+This dashboard highlights professions in Tokyo earning more than **10 Million Yen** annually. The analysis breaks down income brackets to identify which sectors dominate the wealthy elite.
 
-## 🔍 Key Findings & Insights
+**Headline Stat:** **Engineering** is the dominant high-income profession, representing **33%** of all high earners.
 
-### 1. The "Engineering" Dominance
-* **Top Profession:** **Engineering** is the single largest high-income profession, accounting for **33%** of all earners making over ¥10M.
-* **Challenging Assumptions:** The data reveals that technical roles (Engineering) and corporate support roles (Clerical) often out-earn traditional "Admin/Managerial" roles in aggregate volume.
+## 🔍 Key Findings by Income Bracket
 
-### 2. The ">15 Million Yen" Shift
-The composition of wealth changes drastically as income rises to the ultra-wealthy bracket (>¥15M):
-* **Clerical Dominance:** Surprisingly, **Clerical** roles (likely Corporate Headquarters / Senior Specialists) make up the largest share of the >15M bracket at **30.4%**.
-* **Engineering:** Follows closely at **23.7%**.
-* **Management:** "Admin Managerial" roles account for **15.5%**, placing them third behind technical and corporate specialist roles.
+### 1. The 10 to 12.49 Million Yen Bracket
+* **Dominant Professions:** Clerical and Engineering.
+* **Composition:** Clerical leads with **36.95%**, closely followed by Engineering at **32.73%**.
 
-### 3. Income Stratification
-* **10M - 12.5M Tier:** Heavily populated by **Engineering (36.9%)**, indicating a high ceiling for technical contributors.
-* **Sales:** Remains a consistent but smaller contributor to the high-income pool (approx 8-16% depending on the bracket).
+### 2. The 12.5 to 14.99 Million Yen Bracket
+* **Shift in Dominance:** Engineering takes the lead with **40.1%**, while Clerical drops to **31.7%**.
+
+### 3. The >15 Million Yen Bracket (Top Tier)
+* **Engineering:** Remains the top category at **30.42%**.
+* **The Surprise:** **Admin/Managerial** appears as the second largest category (**26.63%**), surpassing Clerical (**23.74%**).
+
+### 4. Low-Performing Sectors
+* **Agriculture:** The lowest performer, registering only a small presence in the 10-12.49M bracket and null in higher tiers.
+* **Other Low Earners:** Transport, Service, Security, Construction, and Manufacturing show minimal representation in the high-income workforce.
 
 ## 📸 Dashboard Visuals
 
-### Visual: High-Income Breakdown
-*A breakdown of the >10M Yen workforce, showing the 33% dominance of Engineering and the shift to Clerical roles in the top tier.*
+### High-Income Breakdown
+*Visualizing the income brackets and the dominance of Engineering across tiers.*
 ![Tokyo Analysis](Tokyo%20High-Income%20Workforce%20Analysis.png)
 
 ## 🛠️ Technical Stack
 * **Tool:** Microsoft Power BI
-* **Techniques:** Granular income bucket analysis, Tree Maps for categorical density, and comparative tier analysis.
+* **Analysis:** Income bracket segmentation and categorical distribution analysis.
