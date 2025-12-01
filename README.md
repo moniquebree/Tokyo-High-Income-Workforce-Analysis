@@ -1,32 +1,30 @@
-# Project 2: Japan Socio-Economic Atlas (Tokyo Pilot)
+# 🗼 Tokyo High-Income Workforce Analysis
 
-## 1. Project Objective
-The goal of this project was to build a relational database from raw, unstructured government data to analyze the relationship between **Occupation** and **High Income** in Japan. The pilot phase focused specifically on the high-income workforce (>10 Million Yen) in **Tokyo**.
+## 📊 Project Overview
+This dashboard performs a deep-dive micro-analysis of the economic elite in Tokyo. Focusing exclusively on the **High-Income bracket (>¥10 Million annually)**, the analysis challenges the assumption that "Management" is the only path to wealth in the capital.
 
-## 2. Core Tools & Skills
-* **Python (Pandas):** Used to write custom cleaning scripts to strip complex headers from government Excel files and normalize column names.
-* **SQL (SQLite):** Used to build a relational database (`japan_atlas.db`) and execute targeted queries to filter for specific regions (Tokyo) and income brackets.
-* **Power BI:** Used for data modeling (unpivoting), DAX measure creation, and designing the final Executive Dashboard.
+## 🔍 Key Findings & Insights
 
-## 3. The Process (ETL & Analysis)
-1.  **Data Extraction:** Acquired raw "Employment Status Survey" data (Tables 4 and 25) containing multi-layered headers.
-2.  **Python Cleaning:** Wrote a custom Python script (`clean_data.py`) to:
-    * Automatically detect and strip metadata rows.
-    * Split the "Area" column into separate `Prefecture Code` and `Prefecture Name` columns for SQL indexing.
-    * Standardize column names for database ingestion.
-3.  **Database Construction:** Built a SQLite database and loaded the clean data into two linked tables: `labor_force` and `income_occupation`.
-4.  **SQL Analysis:** Executed a complex SQL query to filter for **"Tokyo-to"** and **Income brackets > 10 Million Yen**, exporting the results to a clean CSV for visualization.
-5.  **Visualization:** Built an interactive Power BI dashboard, utilizing **DAX measures** to calculate percentage shares and **Unpivoting** techniques to restructure the data for visual comparison.
+### 1. The "Engineering" Dominance
+* **Top Profession:** **Engineering** is the single largest high-income profession, accounting for **33%** of all earners making over ¥10M.
+* **Challenging Assumptions:** The data reveals that technical roles (Engineering) and corporate support roles (Clerical) often out-earn traditional "Admin/Managerial" roles in aggregate volume.
 
-## 4. Key Findings (The Story)
-* **Finding 1: The Professional Dominance.** Contrary to the assumption that executive management is the primary path to wealth, **Clerical** roles are actually the #1 high-income profession in Tokyo (**67K**), followed closely by **Professional/Engineering** (**60K**).
-* **Finding 2: The Technical Premium.** Technical expertise is highly valued in the capital; **Engineering roles alone account for 38.9%** of the high-income workforce analyzed.
-* **Finding 3: Income Distribution.** The wealth pyramid is visible: **44.1%** of high earners fall into the entry high-income bracket (10-12.5M Yen), while only **17.5%** reach the top tier (>15M Yen).
+### 2. The ">15 Million Yen" Shift
+The composition of wealth changes drastically as income rises to the ultra-wealthy bracket (>¥15M):
+* **Clerical Dominance:** Surprisingly, **Clerical** roles (likely Corporate Headquarters / Senior Specialists) make up the largest share of the >15M bracket at **30.4%**.
+* **Engineering:** Follows closely at **23.7%**.
+* **Management:** "Admin Managerial" roles account for **15.5%**, placing them third behind technical and corporate specialist roles.
 
-## 5. Visualizations
-Below is the Executive Dashboard analyzing the high-income workforce in Tokyo (Total High Earner Count: **154K**).
+### 3. Income Stratification
+* **10M - 12.5M Tier:** Heavily populated by **Engineering (36.9%)**, indicating a high ceiling for technical contributors.
+* **Sales:** Remains a consistent but smaller contributor to the high-income pool (approx 8-16% depending on the bracket).
 
-![Tokyo High-Income Dashboard](Tokyo High-Income Workforce Analysis.png)
+## 📸 Dashboard Visuals
 
-## 6. Future Scope
-The next phase of this project will expand the SQL analysis from the Tokyo Pilot to a **National Atlas**, using the full dataset to compare income inequality and professional distribution across all 47 prefectures.
+### Visual: High-Income Breakdown
+*A breakdown of the >10M Yen workforce, showing the 33% dominance of Engineering and the shift to Clerical roles in the top tier.*
+![Tokyo Analysis](tokyo-dashboard.png)
+
+## 🛠️ Technical Stack
+* **Tool:** Microsoft Power BI
+* **Techniques:** Granular income bucket analysis, Tree Maps for categorical density, and comparative tier analysis.
