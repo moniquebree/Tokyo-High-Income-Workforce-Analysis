@@ -23,7 +23,7 @@ The composition of wealth changes drastically as income rises to the ultra-wealt
 
 ### Visual: High-Income Breakdown
 *A breakdown of the >10M Yen workforce, showing the 33% dominance of Engineering and the shift to Clerical roles in the top tier.*
-![Tokyo Analysis](tokyo-dashboard.png)
+![Tokyo Analysis](Tokyo%20High-Income%20Workforce%20Analysis.png)
 
 ## 🛠️ Technical Stack
 * **Tool:** Microsoft Power BI
